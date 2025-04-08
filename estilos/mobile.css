@@ -69,7 +69,7 @@
     }
 
     #servicos hr {
-        width: 50%;
+        display: none;
     }
 
     .servicos-card-container {

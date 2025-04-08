@@ -68,10 +68,6 @@
         margin-top: 30px;
     }
 
-    #servicos hr {
-        display: none;
-    }
-
     .servicos-card-container {
         grid-template-columns: repeat(1, 290px);
         grid-template-rows: repeat(5, 380px);

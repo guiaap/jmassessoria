@@ -1,0 +1,267 @@
+@charset "UTF-8";
+
+@media screen and (min-width: 481px) and (max-width: 768px) {
+
+    .nav-bar {
+        display: none;
+    }
+
+    #home {
+        height: 400px;
+
+        position: relative;
+
+    }
+
+    .home-text-container {
+        width: 90%;
+        max-width: 600px;
+        position: absolute;
+        top: 70px;
+        left: 30px;
+    }
+
+    .home-text-container h1 {
+        font-size: 25px;
+    }
+
+    .home-text-container p {
+        font-size: 15px;
+    }
+
+    #sobre {
+        flex-direction: column;
+    }
+
+    .sobre-text-container {
+        order: 1;
+        height: auto;
+        width: 90%;
+        margin: 30px 0px;
+        padding: 0;
+        border: none;
+    }
+
+    .sobre-text-container h2 {
+        font-size: 25px;
+    }
+
+    .sobre-text-container p {
+        font-size: 14px;
+    }
+
+    .sobre-image-container {
+        order: 2;
+        height: 300px;
+        margin-bottom: 30px;
+    }
+
+    #servicos h2 {
+        margin-top: 30px;
+    }
+
+    .servicos-card-container {
+        grid-template-columns: repeat(2, 220px);
+        grid-template-rows: repeat(3, 370px);
+    }
+
+    .servicos-card img {
+        height: 40px;
+    }
+
+    .servicos-card h3 {
+        font-size: 14px;
+    }
+
+    .servicos-card ul li {
+        font-size: 12px;
+    }
+
+    footer {
+        padding-top: 30px;
+    }
+
+    .footer-content-container {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .footer-left-container {
+        height: auto;
+        width: 100%;
+    }
+
+    .footer-left-container h2 {
+        font-size: 25px;
+    }
+
+    form {
+        width: 460px;
+        margin-top: 15px;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    input, textarea {
+        width: 100%;
+    }
+
+    .footer-right-container {
+        height: auto;
+        width: 100%;
+        margin-top: 30px;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .footer-right-container h2 {
+        font-size: 25px;
+    }
+
+    .outros-contatos {
+        align-items: center;
+    }
+
+    .footer-whatsapp-button {
+        margin-top: 30px;
+    }
+
+    .creditos {
+        margin-top: 20px;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .nav-bar {
+        display: none;
+    }
+
+    #home {
+        height: 400px;
+
+        position: relative;
+
+    }
+
+    .home-text-container {
+        width: 90%;
+        max-width: 600px;
+        position: absolute;
+        top: 70px;
+        left: 30px;
+    }
+
+    .home-text-container h1 {
+        font-size: 25px;
+    }
+
+    .home-text-container p {
+        font-size: 15px;
+    }
+
+    #sobre {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .sobre-text-container {
+        order: 1;
+        height: auto;
+        width: 450px;
+        margin: 30px 0px;
+        padding: 0;
+        border: none;
+    }
+
+    .sobre-text-container h2 {
+        font-size: 25px;
+    }
+
+    .sobre-text-container p {
+        font-size: 14px;
+    }
+
+    .sobre-image-container {
+        order: 0;
+        height: 300px;
+        margin-bottom: 30px;
+    }
+
+    #servicos h2 {
+        margin-top: 30px;
+    }
+
+    .servicos-card-container {
+        grid-template-columns: repeat(3, 220px);
+        grid-template-rows: repeat(2, 370px);
+    }
+
+    .servicos-card img {
+        height: 40px;
+    }
+
+    .servicos-card h3 {
+        font-size: 14px;
+    }
+
+    .servicos-card ul li {
+        font-size: 12px;
+    }
+
+    footer {
+        padding-top: 30px;
+    }
+
+    .footer-content-container {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .footer-left-container {
+        height: auto;
+        width: 100%;
+    }
+
+    .footer-left-container h2 {
+        font-size: 25px;
+    }
+
+    form {
+        width: 460px;
+        margin-top: 15px;
+        align-items: flex-start;
+        justify-content: center;
+    }
+
+    input, textarea {
+        width: 100%;
+    }
+
+    .footer-right-container {
+        height: auto;
+        width: 100%;
+        margin-top: 30px;
+        align-items: center;
+        justify-content: center;
+        padding: 0;
+    }
+
+    .footer-right-container h2 {
+        font-size: 25px;
+    }
+
+    .outros-contatos {
+        align-items: center;
+    }
+
+    .footer-whatsapp-button {
+        margin-top: 30px;
+    }
+
+    .creditos {
+        margin-top: 20px;
+    }
+ }
+

@@ -17,16 +17,14 @@
     #home {
         height: 400px;
 
-        position: static;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        position: relative;
     }
 
     .home-text-container {
-        width: 90%;
-        position: static;
+        max-width: 90%;
+        position: absolute;
+        top: 70px;
+        left: 15px;
     }
 
     .home-text-container h1 {
@@ -69,8 +67,20 @@
     }
 
     .servicos-card-container {
-        grid-template-columns: repeat(1, 290px);
-        grid-template-rows: repeat(5, 380px);
+        grid-template-columns: repeat(1, 280px);
+        grid-template-rows: repeat(5, 360px);
+    }
+
+    .servicos-card img {
+        height: 50px;
+    }
+
+    .servicos-card h3 {
+        font-size: 15px;
+    }
+
+    .servicos-card ul li {
+        font-size: 13px;
     }
 
     footer {

@@ -63,6 +63,14 @@ header a {
     font-weight: 500;
 }
 
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu-icon {
+    display: none;
+}
+
 .nav-bar {
     height: 100%;
 }

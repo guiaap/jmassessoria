@@ -21,7 +21,7 @@ html, body {
 }
 
 header {
-    height: 60px;
+    height: 70px;
     width: 100%;
 
     position: sticky;
@@ -33,7 +33,7 @@ header {
     justify-content: center;
     gap: 100px;
 
-    background-color: #295773ef;
+    background-color: rgba(238, 232, 238, 0.904);
 }
 
 header a {
@@ -43,6 +43,10 @@ header a {
 
 .header-logo {
     text-align: center;
+}
+
+.header-logo img {
+    height: 60px;
 }
 
 .header-logo h1 {
@@ -97,8 +101,9 @@ header a {
     align-items: center;
     justify-content: center;
 
-    color: #FFF;
+    color: #21475e;
     text-decoration: none;
+    font-weight: 500;
 }
 
 .nav-link::after {
@@ -108,12 +113,12 @@ header a {
     height: 3px;
     left: 0;
     bottom: 0;
-    background-color: #7AAC6C;
+    background-color: #92b1cc;
     transition: width 0.3s ease;
 }
 
 .nav-link:hover {
-    color: #7AAC6C;
+    color: #92b1cc;
 }
 
 .nav-link:hover::after {
@@ -157,14 +162,14 @@ header a {
     margin-bottom: 10px;
     font-size: 35px;
     font-weight: 700;
-    text-shadow: 1px 1px 1px #7aac6cd8;
+    text-shadow: 2px 2px 2px #21475e9f;
 }
 
 .home-text-container p {
     font-size: 18px;
     font-weight: 500;
     text-align: justify;
-    text-shadow: 1px 1px 1px #7aac6cd8;
+    text-shadow: 2px 2px 2px #21475e9f;
 }
 
 #sobre {
@@ -174,7 +179,7 @@ header a {
     align-items: center;
     justify-content: center;
 
-    background-color: #F3EBF3
+    background-color: #F3EBF3;
 }
 
 .sobre-image-container {
@@ -184,7 +189,7 @@ header a {
     align-items: center;
     justify-content: center;
 
-    border: 1px solid #7AAC6C;
+    border: 1px solid #21475e;
 }
 
 .sobre-image-container img {
@@ -205,7 +210,7 @@ header a {
     align-items: left;
     justify-content: center;
 
-    border-bottom: 1px solid #7AAC6C;
+    border-bottom: 1px solid #21475e;
 
     transition: 0.3s;
 }
@@ -219,7 +224,7 @@ header a {
     height: 4px;
     width: 70px;
     border: none;
-    background-color: #7AAC6C;
+    background-color: #21475e;
 
 }
 
@@ -237,14 +242,14 @@ header a {
     align-items: center;
     justify-content: center;
 
-    background-color: #d4e1eb;
+    background-color: #C8D7E4;
 }
 
 #servicos h2 {
     margin-top: 30px;
     margin-bottom: 10px;
     font-size: 30px;
-    color: #183242
+    color: #21475e;
 }
 
 #servicos hr {
@@ -292,7 +297,7 @@ header a {
 .colors {
     height: 4px;
     width: 100%;
-    background-image: linear-gradient(120deg,#295773, #218006);
+    background-image: linear-gradient(120deg,#295773, #C8D7E4);
 
 }
 
@@ -325,7 +330,7 @@ footer {
     align-items: center;
     justify-content: center;
 
-    background-color: #295773;
+    background-color: #21475e;
 }
 
 .footer-content-container {
@@ -357,7 +362,7 @@ footer {
     height: 4px;
     width: 70px;
     border: none;
-    background-color: #7AAC6C;
+    background-color: #C8D7E4;
 }
 
 form {
@@ -417,7 +422,7 @@ button:hover {
     height: 4px;
     width: 70px;
     border: none;
-    background-color: #7AAC6C;
+    background-color: #C8D7E4;
 }
 
 .redes-sociais {
@@ -460,6 +465,11 @@ button:hover {
     justify-content: left;
 }
 
+.material-symbols-outlined {
+    margin-right: 5px;
+    font-size: 24px;
+}
+
 .footer-whatsapp-button {
     margin-top: 20px;
     padding: 15px;
@@ -479,10 +489,7 @@ button:hover {
     border: 1px solid #218006;
 }
 
-.material-symbols-outlined {
-    margin-right: 10px;
-    font-size: 24px;
-}
+
 
 .creditos {
     width: 100%;

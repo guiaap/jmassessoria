@@ -273,7 +273,7 @@ header a {
 }
 
 .servicos-card {
-    padding: 15px;
+    padding: 10px;
 
     display: flex;
     flex-direction: column;
@@ -283,6 +283,7 @@ header a {
 
     background-color: #FFF;
     border: 2px solid #295773;
+    border-radius: 10px;
     
     box-shadow: 4px 4px 10px #a6b0abcd;
 
@@ -478,6 +479,7 @@ button:hover {
     color: #FFF;
 
     background-color: #218006;
+    border: 2px solid #21475e;
     border-radius: 20px;
 
     transition: 0.8s;
@@ -486,10 +488,8 @@ button:hover {
 .footer-whatsapp-button:hover {
     color: #218006;
     background-color: #FFF;
-    border: 1px solid #218006;
+    border: 2px solid #218006;
 }
-
-
 
 .creditos {
     width: 100%;

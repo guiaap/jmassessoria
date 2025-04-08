@@ -49,6 +49,7 @@
 
         <section id="servicos">
             <h2>Serviços</h2>
+            <hr>
             <div class="servicos-card-container">
                 <div class="servicos-card">
                     <div class="colors"></div>
@@ -113,6 +114,7 @@
                     <div class="colors"></div>
                 </div>
             </div>
+            <hr>
         </section>
 
         <footer id="contato">
@@ -120,13 +122,13 @@
                 <div class="footer-left-container">
                     <h2>Entre em Contato</h2>
                     <hr>
-                    <form action="" method="POST">
-                        <label for="name">Nome</label>
-                        <input type="text" id="name" name="name" required/>
+                    <form action="scripts/contato.php" method="POST">
+                        <label for="nome">Nome</label>
+                        <input type="text" id="nome" name="nome" required/>
                         <label for="email">E-mail</label>
                         <input type="email" id="email" name="email" required />
-                        <label for="message">Mensagem</label>
-                        <textarea id="message" name="message" rows="5" required></textarea>
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
                         <button type="submit">Enviar</button>
                     </form>
                 </div>
@@ -169,6 +171,5 @@
         </footer>
     </main>
     <a class="whatsapp-button" href="https://wa.me/47991181188" target="_blank"><img src="imagens/whatsapp.png" alt="WhatsApp"></a>
-    <script src="scripts/script.js"></script>
 </body>
 </html>

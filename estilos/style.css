@@ -248,14 +248,23 @@ header a {
 }
 
 #servicos h2 {
-    margin-top: 50px;
+    margin-top: 30px;
+    margin-bottom: 10px;
     font-size: 30px;
-    color: #000;
+    color: #183242
+}
+
+#servicos hr {
+    height: 1px;
+    width: 90%;
+    background-color: #295773;
+    border: none;
+    margin-bottom: 30px;
 }
 
 .servicos-card-container {
     width: 100%;
-    margin: 30px 0px 50px 0px;
+    margin-bottom: 30px;
 
     display: grid;
     grid-template-columns: repeat(3, 290px);

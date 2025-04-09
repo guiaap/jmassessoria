@@ -1,19 +1,26 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $nome = htmlspecialchars($_POST["nome"]);
-    $email = htmlspecialchars($_POST["email"]);
-    $mensagem = htmlspecialchars($_POST["mensagem"]);
+    $nome = htmlspecialchars($_POST['nome'] ?? '');
+    $email = filter_var($_POST['email'] ?? '', FILTER_VALIDATE_EMAIL);
+    $mensagem = htmlspecialchars($_POST['mensagem'] ?? '');
 
-    $para = "guilherme.pedroso@tecniwerservice.com.br";  
-    $assunto = "Nova mensagem do site";
-    $corpo = "Nome: $nome\nEmail: $email\nMensagem:\n$mensagem";
+    if ($email) {
+        $para = "guilheerme.pedroso@tecniwerservice.com.br";
+        $assunto = "Nova mensagem de $nome";
+        $corpo = "Nome: $nome\nEmail: $email\nMensagem:\n$mensagem";
 
-    $headers = "From: $email";
+        // Cabeçalhos do e-mail
+        $headers = "From: $email\r\n";
+        $headers .= "Reply-To: $email\r\n";
+        $headers .= "Content-Type: text/plain; charset=UTF-8\r\n";
 
-    if (mail($para, $assunto, $corpo, $headers)) {
-        echo "Mensagem enviada com sucesso!";
+        if (mail($para, $assunto, $corpo, $headers)) {
+            echo "Mensagem enviada com sucesso!";
+        } else {
+            echo "Erro ao enviar mensagem.";
+        }
     } else {
-        echo "Erro ao enviar mensagem.";
+        echo "E-mail inválido.";
     }
 }
 ?>

@@ -6,28 +6,51 @@
     <title>JM - Soluções Documentais</title>
     <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-png">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
-    <link rel="stylesheet" href="estilos/style.css">
-    <link rel="stylesheet" href="estilos/mobile.css">
-    <link rel="stylesheet" href="estilos/tablet.css">
-    <link rel="stylesheet" href="estilos/laptop.css">
+    <link rel="stylesheet" href="estilos/estilo.css">
 </head>
 <body>
-    <header>
+    <header class="header-pc">
+
         <a href="index.html">
-            <div class="header-logo fade-in">
+            <div class="header-pc-logo fade-in">
                <img src="imagens/logo.png" alt="Joelma Matias - Soluções Documentais">
             </div>
         </a>
 
-        <nav class="nav-bar fade-in">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                <li class="nav-item"><a class="nav-link" href="#sobre">Sobre Mim</a></li>
-                <li class="nav-item"><a class="nav-link" href="#servicos">Serviços</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+        <nav class="nav-bar-pc">
+            <ul class="nav-list-pc">
+                <li class="nav-item-pc"><a class="nav-link-pc" href="#home">Home</a></li>
+                <li class="nav-item-pc"><a class="nav-link-pc" href="#sobre">Sobre Mim</a></li>
+                <li class="nav-item-pc"><a class="nav-link-pc" href="#servicos">Serviços</a></li>
+                <li class="nav-item-pc"><a class="nav-link-pc" href="#contato">Contato</a></li>
             </ul>
         </nav>
     </header>
+
+    
+    <div class="header-mobile">
+        <nav class="nav-bar-mobile fade-in">
+            <a href="index.html">
+                <div class="header-logo-mobile fade-in">
+                    <img src="imagens/logo.png" alt="Joelma Matias - Soluções Documentais">
+                </div>
+            </a>
+            <div class="mobile-menu-icon">
+                <button onclick="menuShow()"><img src="imagens/menu.png" alt="Menu" class="icon"></button>
+            </div>
+        </nav>
+        
+        <div class="mobile-menu">
+            <ul>
+                <li class="nav-item-mobile"><a class="nav-link-mobile" href="#home">Home</a></li>
+                <li class="nav-item-mobile"><a class="nav-link-mobile" href="#sobre">Sobre Mim</a></li>
+                <li class="nav-item-mobile"><a class="nav-link-mobile" href="#servicos">Serviços</a></li>
+                <li class="nav-item-mobile"><a class="nav-link-mobile" href="#contato">Contato</a></li>
+            </ul>
+        </div>
+    </div>
+   
+ 
     <main>
         <section id="home">
             <div class="home-text-container fade-in">
@@ -38,7 +61,7 @@
         >
         <section id="sobre">
             <div class="sobre-image-container fade-in">
-                <img src="imagens/negrinha.jpg" alt="Joelma Matias">
+                <img src="imagens/joelma.png" alt="Joelma Matias">
             </div>
             <div class="sobre-text-container fade-in">
                 <h2>Sobre Mim</h2>
@@ -115,6 +138,21 @@
                     </ul>
                     <div class="colors"></div>
                 </div>
+                <div class="servicos-card">
+                    <div class="colors"></div>
+                    <img src="imagens/condominio.png" alt="Perícia e Administração Judicial">
+                    <h3>Administração de Condomínios</h3>
+                        <ul>
+                            <li>Gestão financeira e Administração de pessoal</li>
+                            <li>Suporte para assembleias e documentação</li>
+                            <li>Contratação e acompanhamento de prestadores</li>
+                            <li>Consultoria em rotinas legais e trabalhistas</li>
+                            <li>Suporte técnico e jurídico</li>
+                            <li>Atendimento personalizado e Transparência total na gestão</li>
+                            <li>Atendemos condomínios residenciais, comerciais e mistos</li>
+                        </ul>
+                    <div class="colors"></div>
+                </div>
             </div>
             <hr>
         </section>
@@ -143,16 +181,7 @@
                                 <img src="imagens/instagram.png" alt="Instagram">
                             </div>
                         </a>
-                        <a href="#">
-                            <div>
-                                <img src="imagens/facebook.png" alt="Facebook">
-                            </div>
-                        </a>
-                        <a href="#">
-                            <div>
-                                <img src="imagens/linkedin.png" alt="LinkedIn">
-                            </div>
-                        </a>
+                        <p>@jm.administration</p>
                     </div>
                     <div class="outros-contatos">
                         <h3>Outras Formas de Contato:</h3>

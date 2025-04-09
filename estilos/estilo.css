@@ -246,7 +246,7 @@ html, body {
 
     display: grid;
     grid-template-columns: repeat(3, 290px);
-    grid-template-rows: 390px 420px;
+    grid-template-rows: repeat(2, auto);
     gap: 10px;
     justify-content: center;
     align-content: center;
@@ -261,6 +261,8 @@ html, body {
     justify-content: space-between;
     gap: 20px;
 
+    position: relative;
+
     background-color: #FFF;
     border: 2px solid #295773;
     border-radius: 10px;
@@ -268,18 +270,6 @@ html, body {
     box-shadow: 4px 4px 10px #a6b0abcd;
 
     transition: 0.3s;
-}
-
-.servicos-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 6px 6px 15px #A6B0AB;
-}
-
-.colors {
-    height: 4px;
-    width: 100%;
-    background-image: linear-gradient(120deg,#295773, #C8D7E4);
-
 }
 
 .servicos-card img {
@@ -292,13 +282,54 @@ html, body {
     font-size: 15px;
 }
 
-.servicos-card ul {
-    height: 200px;
-    width: 88%;
+.vermais {
+    background-color: transparent;
+    border: none;
 }
 
-.servicos-card li {
-    font-size: 13px;
+.vermais:hover {
+    background-color: transparent;
+    border: none;
+}
+
+.servicos-card .vermaisimg {
+    height: 40px;
+}
+
+.servicos-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 6px 6px 15px #A6B0AB;
+    z-index: 500;
+}
+
+.card-full-content {
+    display: none;
+    z-index: 1000;
+}
+
+.servicos-card.open .card-full-content {
+    display: block;
+    position: absolute;
+    top: 210px;
+    z-index: 2000;
+    border: 1px solid #21475e;
+    box-shadow: -10px 5px 5px rgba(0, 0, 0, 0.356);
+
+    background-color: #c8d7e4;
+}
+
+.card-full-content ul {
+    padding: 30px;
+}
+
+.card-full-content li {
+    font-size: 14px;
+}
+
+.colors {
+    height: 4px;
+    width: 100%;
+    background-image: linear-gradient(120deg,#295773, #C8D7E4);
 }
 
 footer {
@@ -311,7 +342,7 @@ footer {
     align-items: center;
     justify-content: center;
 
-    background-color: #21475e;
+    background-color: #72A1BD;
 }
 
 .footer-content-container {
@@ -325,7 +356,7 @@ footer {
 
 .footer-left-container {
     height: 100%;
-    width: 50%;
+    width: 60%;
 
     display: flex;
     flex-direction: column;
@@ -385,7 +416,7 @@ button:hover {
 
 .footer-right-container {
     height: 100%;
-    width: 50%;
+    width: 40%;
     padding-left: 50px;
 
     display: flex;
@@ -418,6 +449,7 @@ button:hover {
 
 .redes-sociais p {
     color: #FFF;
+    z-index: 0;
 }
 
 .redes-sociais a div {
@@ -471,7 +503,7 @@ button:hover {
     font-size: 15px;
 
     background-color: #218006;
-    border: 2px solid #21475e;
+    border: 2px solid #72A1BD;
     border-radius: 20px;
 
     transition: 0.8s;
@@ -652,7 +684,7 @@ button:hover {
 
     .servicos-card-container {
         grid-template-columns: repeat(1, 280px);
-        grid-template-rows: repeat(5, 360px);
+        grid-template-rows: repeat(6, auto);
     }
 
     .servicos-card img {
@@ -724,15 +756,33 @@ button:hover {
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
 
-    .header-logo img {
+    .header-pc {
+        display: none;
+    }
+
+    .header-mobile {
+        display: block;
+        height: auto;
+
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+
+        background-color: rgba(238, 232, 238, 0.904);
+    }
+
+    .header-logo-mobile img {
         height: 40px;
     }
 
-    .nav-bar {
-        padding: 5px 10px;
+    .nav-bar-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.7rem;
     }
 
-    .nav-item {
+    .nav-item-mobile {
         display: none;
     }
 
@@ -754,17 +804,27 @@ button:hover {
         display: flex;
         flex-direction: column;
         text-align: center;
-        padding-bottom: 1rem;
     }
 
-    .mobile-menu .nav-item {
+    .mobile-menu .nav-item-mobile {
         display: block;
         font-size: 13px;
         padding-top: 0.8rem;
     }
 
-    .open {
-        display: block;
+    .nav-link-mobile {
+        text-decoration: none;
+        color: #21475e;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+    
+    .mobile-menu.open {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
     }
 
     #home {
@@ -823,7 +883,7 @@ button:hover {
 
     .servicos-card-container {
         grid-template-columns: repeat(2, 220px);
-        grid-template-rows: repeat(3, 370px);
+        grid-template-rows: repeat(3, auto);
     }
 
     .servicos-card img {
@@ -895,15 +955,33 @@ button:hover {
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
 
-    .header-logo img {
+    .header-pc {
+        display: none;
+    }
+
+    .header-mobile {
+        display: block;
+        height: auto;
+
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+
+        background-color: rgba(238, 232, 238, 0.904);
+    }
+
+    .header-logo-mobile img {
         height: 40px;
     }
 
-    .nav-bar {
-        padding: 5px 10px;
+    .nav-bar-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.7rem;
     }
 
-    .nav-item {
+    .nav-item-mobile {
         display: none;
     }
 
@@ -925,17 +1003,27 @@ button:hover {
         display: flex;
         flex-direction: column;
         text-align: center;
-        padding-bottom: 1rem;
     }
 
-    .mobile-menu .nav-item {
+    .mobile-menu .nav-item-mobile {
         display: block;
         font-size: 13px;
         padding-top: 0.8rem;
     }
 
-    .open {
-        display: block;
+    .nav-link-mobile {
+        text-decoration: none;
+        color: #21475e;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+    
+    .mobile-menu.open {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
     }
 
     #home {
@@ -995,7 +1083,7 @@ button:hover {
 
     .servicos-card-container {
         grid-template-columns: repeat(3, 220px);
-        grid-template-rows: repeat(2, 370px);
+        grid-template-rows: repeat(2, auto);
     }
 
     .servicos-card img {
@@ -1067,15 +1155,33 @@ button:hover {
 
  @media  screen and (min-width: 1025px) and (max-width: 1280px) {
     
-    .header-logo img {
+    .header-pc {
+        display: none;
+    }
+
+    .header-mobile {
+        display: block;
+        height: auto;
+
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+
+        background-color: rgba(238, 232, 238, 0.904);
+    }
+
+    .header-logo-mobile img {
         height: 40px;
     }
 
-    .nav-bar {
-        padding: 5px 10px;
+    .nav-bar-mobile {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.7rem;
     }
 
-    .nav-item {
+    .nav-item-mobile {
         display: none;
     }
 
@@ -1097,17 +1203,27 @@ button:hover {
         display: flex;
         flex-direction: column;
         text-align: center;
-        padding-bottom: 1rem;
     }
 
-    .mobile-menu .nav-item {
+    .mobile-menu .nav-item-mobile {
         display: block;
         font-size: 13px;
         padding-top: 0.8rem;
     }
 
-    .open {
-        display: block;
+    .nav-link-mobile {
+        text-decoration: none;
+        color: #21475e;
+    }
+
+    .mobile-menu {
+        display: none;
+    }
+    
+    .mobile-menu.open {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 1rem;
     }
 
     .home-text-container {

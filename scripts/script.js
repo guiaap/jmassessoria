@@ -22,3 +22,15 @@ const observador = new IntersectionObserver((entradas) => {
         document.querySelector('.icon').src = "imagens/close_icon.png";
     }
 }
+
+function toggleCard(card) {
+  card.classList.toggle("open");
+
+  const btnImg = card.querySelector(".vermaisimg");
+
+  if (card.classList.contains("open")) {
+    btnImg.src = "imagens/up.png"; // Mostrar seta para cima ao abrir
+  } else {
+    btnImg.src = "imagens/more.png"; // Voltar para seta para baixo
+  }
+}

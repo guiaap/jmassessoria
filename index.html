@@ -39,7 +39,7 @@
                 <button onclick="menuShow()"><img src="imagens/menu.png" alt="Menu" class="icon"></button>
             </div>
         </nav>
-        
+
         <div class="mobile-menu">
             <ul>
                 <li class="nav-item-mobile"><a class="nav-link-mobile" href="#home">Home</a></li>
@@ -55,7 +55,7 @@
         <section id="home">
             <div class="home-text-container fade-in">
                 <h1>Gestão Estratégica, Segurança e Resultados!</h1>
-                <p>Aqui você encontrará soluções personalizadas nas áreas de Administração, Departamento Pessoal, Gestão de Pessoas, Segurança do Trabalho, Contratos e muito mais. Com experiência sólida e formação multidisciplinar, ofereço serviços estratégicos para empresas que buscam excelência, organização e conformidade.</p>
+                <p>Aqui você encontrará soluções personalizadas nas áreas de Administração, Departamento Pessoal, Gestão de Pessoas, Segurança do Trabalho, Contratos e muito mais. Com experiência sólida e formação multidisciplinar, ofereço serviços estratégicos, para empresas que buscam excelência, organização e conformidade.</p>
             </div>
         </section
         >
@@ -66,8 +66,8 @@
             <div class="sobre-text-container fade-in">
                 <h2>Sobre Mim</h2>
                 <hr>
-                <p>Sou formada em Administração de Empresas, com pós-graduação em Gestão Estratégica de Pessoas. Atualmente, curso o Técnico em Segurança do Trabalho e possuo formações complementares em Gestão de Cargos e Salários, Gestão de Contratos e Programação Neurolinguística (PNL).</p>
-                <p>Sou também Administradora Judicial e Perita registrada pelo CRA-SC, com mais de 18 anos de experiência na área administrativa, sendo mais de 10 anos atuando com foco em Departamento Pessoal. Tenho vivência no setor da construção civil e eletromecânica, onde desenvolvi forte expertise em gestão de pessoas, processos e segurança do trabalho.</p>
+                <p>Sou formada em Administração de Empresas, com pós-graduação em Gestão Estratégica de Pessoas. Com formação complementar em Segurança do Trabalho, Gestão de Cargos e Salários, Gestão de Contratos, Programação Neurolinguística (PNL) e Administração de Condomínios.</p>
+                <p>Sou também Administradora Judicial e Perita registrada pelo CRA-SC, com mais de 20 anos de experiência na área administrativa, sendo mais de 15 anos atuando com foco em Departamento Pessoal. Tenho vivência no setor da construção civil e eletromecânica, onde desenvolvi forte expertise em gestão de pessoas, processos e segurança do trabalho.</p>
                 <p>Acredito na atualização constante, no atendimento humanizado e na entrega de soluções práticas e eficazes para empresas e profissionais.</p>
             </div>
         </section>
@@ -75,73 +75,92 @@
         <section id="servicos">
             <h2 class="fade-in">Serviços</h2>
             <hr>
+
             <div class="servicos-card-container fade-in">
-                <div class="servicos-card">
+                <div class="servicos-card" onclick="toggleCard(this)">
                     <div class="colors"></div>
                     <img src="imagens/dp.png" alt="Departamento Pessoal">
                     <h3>Departamento Pessoal</h3>
-                    <ul>
-                        <li>Admissão e desligamento de colaboradores</li>
-                        <li>Folha de pagamento e encargos</li>
-                        <li>Controle de ponto e benefícios</li>
-                        <li>Gestão de férias, 13º e rescisões</li>
-                        <li>Suporte ao RH e liderança</li>
-                    </ul>
+                    <button class="vermais"><img src="imagens/more.png" alt="Ver Mais" class="vermaisimg"></button>
+                    <div class="card-full-content">
+                        <ul>
+                            <li>Admissão e desligamento de colaboradores</li>
+                            <li>Folha de pagamento e encargos</li>
+                            <li>Controle de ponto e benefícios</li>
+                            <li>Gestão de férias, 13º e rescisões</li>
+                            <li>Suporte ao RH e liderança</li>
+                        </ul>
+                    </div>
                     <div class="colors"></div>
                 </div>
-                <div class="servicos-card">
+
+                <div class="servicos-card" onclick="toggleCard(this)">
                     <div class="colors"></div>
                     <img src="imagens/gdp.png" alt="Gestão de Pessoas">
                     <h3>Gestão de Pessoas</h3>
-                    <ul>
-                        <li>Estruturação de cargos e salários</li>
-                        <li>Desenvolvimento de políticas internas</li>
-                        <li>Análise de clima organizacional</li>
-                        <li>Treinamentos com base em PNL</li>
-                        <li>Apoio à liderança</li>
-                    </ul>
+                    <button class="vermais"><img src="imagens/more.png" alt="Ver Mais" class="vermaisimg"></button>
+                    <div class="card-full-content">
+                        <ul>
+                            <li>Estruturação de cargos e salários</li>
+                            <li>Desenvolvimento de políticas internas</li>
+                            <li>Análise de clima organizacional</li>
+                            <li>Treinamentos com base em PNL</li>
+                            <li>Apoio à liderança</li>
+                        </ul>
+                    </div>
                     <div class="colors"></div>
                 </div>
-                <div class="servicos-card">
+                <div class="servicos-card" onclick="toggleCard(this)">
                     <div class="colors"></div>
                     <img src="imagens/seg.png" alt="Segurança do Trabalho">
                     <h3>Segurança do Trabalho</h3>
-                    <ul>
-                        <li>Elaboração e controle de documentos legais (PGR, PCMSO, LTCAT etc.)</li>
-                        <li>Apoio à SIPAT e ações de prevenção</li>
-                        <li>DDS e integração de segurança</li>
-                        <li>Orientações sobre riscos ocupacionais</li>
-                        <li>Suporte à gestão de SST em obras</li>
-                    </ul>
+                    <button class="vermais"><img src="imagens/more.png" alt="Ver Mais" class="vermaisimg"></button>
+                    <div class="card-full-content">
+                        <ul>
+                            <li>Elaboração e controle de documentos legais (PGR, PCMSO, LTCAT etc.)</li>
+                            <li>Apoio à SIPAT e ações de prevenção</li>
+                            <li>DDS e integração de segurança</li>
+                            <li>Orientações sobre riscos ocupacionais</li>
+                            <li>Suporte à gestão de SST em obras</li>
+                        </ul>
+                    </div>
                     <div class="colors"></div>
                 </div>
-                <div class="servicos-card">
+                <div class="servicos-card" onclick="toggleCard(this)">
                     <div class="colors"></div>
                     <img src="imagens/contratos.png" alt="Gestão de Contratos">
                     <h3>Gestão de Contratos</h3>
-                    <ul>
-                        <li>Elaboração e análise contratual</li>
-                        <li>Controle de vigência e cláusulas</li>
-                        <li>Gestão de obrigações e prazos</li>
-                        <li>Comunicação entre partes contratantes</li>
-                    </ul>
+                    <button class="vermais"><img src="imagens/more.png" alt="Ver Mais" class="vermaisimg"></button>
+                    <div class="card-full-content">
+                        <ul>
+                            <li>Elaboração e análise contratual</li>
+                            <li>Controle de vigência e cláusulas</li>
+                            <li>Gestão de obrigações e prazos</li>
+                            <li>Comunicação entre partes contratantes</li>
+                        </ul>
+                    </div>
                     <div class="colors"></div>
                 </div>
-                <div class="servicos-card">
+                <div class="servicos-card" onclick="toggleCard(this)">
                     <div class="colors"></div>
                     <img src="imagens/pericia.png" alt="Perícia e Administração Judicial">
                     <h3>Perícia e Administração Judicial</h3>
-                    <ul>
-                        <li>Atuação como Administradora Judicial em processos judiciais</li>
-                        <li>Elaboração de laudos e pareceres técnicos</li>
-                        <li>Suporte técnico e legal para processos administrativos e judiciais</li>
-                    </ul>
+                    <button class="vermais"><img src="imagens/more.png" alt="Ver Mais" class="vermaisimg"></button>
+                    <div class="card-full-content">
+                        <ul>
+                            <li>Atuação como Administradora Judicial em processos judiciais</li>
+                            <li>Elaboração de laudos e pareceres técnicos</li>
+                            <li>Suporte técnico e legal para processos administrativos e judiciais</li>
+                        </ul>
+                    </div>
                     <div class="colors"></div>
                 </div>
-                <div class="servicos-card">
+                <div class="servicos-card" onclick="toggleCard(this)">
                     <div class="colors"></div>
                     <img src="imagens/condominio.png" alt="Perícia e Administração Judicial">
                     <h3>Administração de Condomínios</h3>
+                    <button class="vermais"><img src="imagens/more.png" alt="Ver Mais" class="vermaisimg"></button>
+                    <div class="card-full-content">
                         <ul>
                             <li>Gestão financeira e Administração de pessoal</li>
                             <li>Suporte para assembleias e documentação</li>
@@ -151,6 +170,7 @@
                             <li>Atendimento personalizado e Transparência total na gestão</li>
                             <li>Atendemos condomínios residenciais, comerciais e mistos</li>
                         </ul>
+                    </div>
                     <div class="colors"></div>
                 </div>
             </div>

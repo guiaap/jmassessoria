@@ -26,7 +26,7 @@ const observador = new IntersectionObserver((entradas) => {
 function toggleCard(card) {
   card.classList.toggle("open");
 
-  const btnImg = card.querySelector(".vermaisimg");
+  const btnImg = card.querySelector(".btn-vermais-img");
 
   if (card.classList.contains("open")) {
     btnImg.src = "imagens/up.png"; // Mostrar seta para cima ao abrir

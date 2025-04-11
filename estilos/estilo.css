@@ -2,21 +2,20 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+/* CONFIGURAÇÕES GERAIS */
+
 * {
     margin: 0;
     padding: 0;
-
     box-sizing: border-box;
-
     font-family: 'Inter', sans-serif;
 }
 
 html, body {
-    scroll-behavior: smooth;
-
     width: 100%;
     max-width: 2000px;
     margin: auto;
+    scroll-behavior: smooth;
     box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.348);
 }
 
@@ -31,110 +30,101 @@ html, body {
     transform: translateY(0);
 }
 
-.header-mobile{
-    display: none;
-}
+/* CONFIGURAÇÕES DO CABEÇALHO */
 
-.header-pc {
+header {
     height: 80px;
     width: 100%;
-
     position: sticky;
     top: 0;
     z-index: 1000;
-
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 100px;
-
     background-color: rgba(238, 232, 238, 0.904);
 }
 
-.header-pc-logo img {
+.logo {
     height: 60px;
+    width: auto;
+    object-fit: contain;
 }
 
-.nav-bar-pc {
+.nav-bar {
     height: 100%;       
 }
 
-.nav-list-pc {
+.nav-list {
     height: 100%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     gap: 30px;
-
     list-style: none;
 }
 
-.nav-item-pc {
+.nav-item {
     height: 100%;
-
     position: relative;
- 
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.nav-item-pc::after {
+.nav-item::after {
+    height: 2px;
+    width: 0;
     content: "";
     position: absolute;
-    width: 0;
-    height: 2px;
     left: 0;
     bottom: 0;
     background-color: #4ea5b1;
     transition: width 0.3s ease;
 }
 
-.nav-item-pc:hover::after {
+.nav-item:hover::after {
     width: 100%;
 }
 
-.nav-link-pc {
+.nav-link {
     height: 100%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
-    color: #21475e;
     text-decoration: none;
-    font-weight: 500;
     font-size: 16px;
+    font-weight: 500;
+    color: #21475e;
 }
 
-.nav-link-pc:hover {
+.nav-link:hover {
     color: #92b1cc;
 }
+
+.header-mobile{
+    display: none;
+}
+
+/* CONFIGURAÇÕES DA SEÇÃO HOME */
 
 #home {
     height: 500px;
     width: 100%;
-
     position: relative;
-
     background-image: url(../imagens/imgteam.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    background-attachment: fixed;
-
+    
     box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.345);
 }
 
 .home-text-container {
     width: 900px;
-
     position: absolute;
     top: 150px;
     left: 100px;
-
     color: #FFF;
 }
 
@@ -146,52 +136,47 @@ html, body {
 }
 
 .home-text-container p {
+    text-align: justify;
     font-size: 18px;
     font-weight: 500;
-    text-align: justify;
     text-shadow: 2px 2px 2px #21475e9f;
 }
 
+/* CONFIGURAÇÕES DA SEÇÃO SOBRE */
+
 #sobre {
     width: 100%;
-
     display: flex;
     align-items: center;
     justify-content: center;
-
     background-color: #F3EBF3;
 }
 
 .sobre-image-container {
     height: 405px;
-
+    width: 250px;
     display: flex;
     align-items: center;
     justify-content: center;
-
     border: 1px solid #21475e;
 }
 
 .sobre-image-container img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .sobre-text-container {
     height: 405px;
     width: 800px;
-
     margin: 50px 0px;
     padding: 30px 40px 40px 40px;
-
     display: flex;
     flex-direction: column;
     align-items: left;
     justify-content: center;
-
     border-bottom: 1px solid #21475e;
-
     transition: 0.3s;
 }
 
@@ -214,14 +199,16 @@ html, body {
     font-size: 17px;
 }
 
+/* CONFIGURAÇÕES DA SEÇÃO SERVIÇOS */
+
 #servicos {
     width: 100%;
-
+    position: relative;
+    z-index: 1;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
     background-color: #C8D7E4;
 }
 
@@ -235,15 +222,14 @@ html, body {
 #servicos hr {
     height: 1px;
     width: 90%;
-    background-color: #295773;
-    border: none;
     margin-bottom: 30px;
+    border: none;
+    background-color: #295773;
 }
 
 .servicos-card-container {
     width: 100%;
     margin-bottom: 30px;
-
     display: grid;
     grid-template-columns: repeat(3, 290px);
     grid-template-rows: repeat(2, auto);
@@ -254,22 +240,16 @@ html, body {
 
 .servicos-card {
     padding: 10px;
-
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-
     position: relative;
-    z-index: 0;
-
     background-color: #FFF;
     border: 2px solid #295773;
     border-radius: 10px;
-    
     box-shadow: 4px 4px 10px #a6b0abcd;
-
     transition: 0.3s;
 }
 
@@ -283,29 +263,22 @@ html, body {
     font-size: 15px;
 }
 
-.vermais {
+.btn-vermais {
     background-color: transparent;
     border: none;
 }
 
-.vermais:hover {
+.btn-vermais:hover {
     background-color: transparent;
     border: none;
 }
 
-.servicos-card .vermaisimg {
+.btn-vermais .btn-vermais-img {
     height: 40px;
 }
 
-.servicos-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 6px 6px 15px #A6B0AB;
-    z-index: 500;
-}
-
 .card-full-content {
-    display: none;
-    
+    display: none; 
 }
 
 .servicos-card.open .card-full-content {
@@ -353,6 +326,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+
 }
 
 .footer-left-container {
@@ -454,16 +428,17 @@ button:hover {
 
 .redes-sociais p {
     color: #FFF;
-    z-index: 0;
 }
 
 .redes-sociais a div {
     height: 30px;
+    width: 30px;
 }
 
 .redes-sociais a div img {
     height: 100%;
     width: 100%;
+    object-fit: contain;
 }
 
 .outros-contatos {
@@ -508,7 +483,7 @@ button:hover {
     font-size: 15px;
 
     background-color: #218006;
-    border: 2px solid #72A1BD;
+    border: 1px solid #72A1BD;
     border-radius: 20px;
 
     transition: 0.8s;
@@ -517,7 +492,7 @@ button:hover {
 .footer-whatsapp-button:hover {
     color: #218006;
     background-color: #FFF;
-    border: 2px solid #218006;
+    border: 1px solid #218006;
 }
 
 .creditos {
@@ -547,8 +522,10 @@ button:hover {
 
 .whatsapp-button {
     height: 50px;
+    width: 50px;
 
     position: fixed;
+    z-index: 5000;
     right: 30px;
     bottom: 30px;
 
@@ -558,13 +535,14 @@ button:hover {
 .whatsapp-button img {
     height: 100%;
     width: 100%;
+    object-fit: contain;
 }
 
 /* CONFIGURAÇÃO MOBILE */
 
 @media screen and (max-width: 480px) {
 
-    .header-pc {
+    header {
         display: none;
     }
 
@@ -579,8 +557,10 @@ button:hover {
         background-color: rgba(238, 232, 238, 0.904);
     }
 
-    .header-logo-mobile img {
+    .logo-mobile img {
         height: 40px;
+        width: auto;
+        object-fit: contain;
     }
 
     .nav-bar-mobile {
@@ -608,13 +588,13 @@ button:hover {
         height: 26px;
     }
 
-    .mobile-menu ul {
+    .nav-list-mobile {
         display: flex;
         flex-direction: column;
         text-align: center;
     }
 
-    .mobile-menu .nav-item-mobile {
+    .nav-item-mobile {
         display: block;
         font-size: 13px;
         padding-top: 0.8rem;
@@ -680,6 +660,7 @@ button:hover {
     .sobre-image-container {
         order: 2;
         height: 300px;
+        width: 200px;
         margin-bottom: 30px;
     }
 
@@ -761,7 +742,7 @@ button:hover {
 
 @media screen and (min-width: 481px) and (max-width: 768px) {
 
-    .header-pc {
+    header {
         display: none;
     }
 
@@ -776,8 +757,10 @@ button:hover {
         background-color: rgba(238, 232, 238, 0.904);
     }
 
-    .header-logo-mobile img {
+    .logo-mobile img {
         height: 40px;
+        width: auto;
+        object-fit: contain;
     }
 
     .nav-bar-mobile {
@@ -805,13 +788,13 @@ button:hover {
         height: 26px;
     }
 
-    .mobile-menu ul {
+    .nav-list-mobile {
         display: flex;
         flex-direction: column;
         text-align: center;
     }
 
-    .mobile-menu .nav-item-mobile {
+    .nav-item-mobile {
         display: block;
         font-size: 13px;
         padding-top: 0.8rem;
@@ -879,6 +862,7 @@ button:hover {
     .sobre-image-container {
         order: 2;
         height: 300px;
+        width: 200px;
         margin-bottom: 30px;
     }
 
@@ -960,7 +944,7 @@ button:hover {
 
 @media screen and (min-width: 769px) and (max-width: 1024px) {
 
-    .header-pc {
+    header {
         display: none;
     }
 
@@ -975,8 +959,10 @@ button:hover {
         background-color: rgba(238, 232, 238, 0.904);
     }
 
-    .header-logo-mobile img {
+    .logo-mobile img {
         height: 40px;
+        width: auto;
+        object-fit: contain;
     }
 
     .nav-bar-mobile {
@@ -1004,13 +990,13 @@ button:hover {
         height: 26px;
     }
 
-    .mobile-menu ul {
+    .mobile-nav-list {
         display: flex;
         flex-direction: column;
         text-align: center;
     }
 
-    .mobile-menu .nav-item-mobile {
+    .nav-item-mobile {
         display: block;
         font-size: 13px;
         padding-top: 0.8rem;
@@ -1042,7 +1028,7 @@ button:hover {
         width: 90%;
         max-width: 600px;
         position: absolute;
-        top: 70px;
+        top: 100px;
         left: 30px;
     }
 
@@ -1079,6 +1065,7 @@ button:hover {
     .sobre-image-container {
         order: 0;
         height: 300px;
+        width: 200px;
         margin-bottom: 30px;
     }
 
@@ -1160,7 +1147,7 @@ button:hover {
 
  @media  screen and (min-width: 1025px) and (max-width: 1280px) {
     
-    .header-pc {
+    header {
         display: none;
     }
 
@@ -1175,8 +1162,10 @@ button:hover {
         background-color: rgba(238, 232, 238, 0.904);
     }
 
-    .header-logo-mobile img {
+    .logo-mobile img {
         height: 40px;
+        width: auto;
+        object-fit: contain;
     }
 
     .nav-bar-mobile {
@@ -1204,13 +1193,13 @@ button:hover {
         height: 26px;
     }
 
-    .mobile-menu ul {
+    .nav-list-mobile {
         display: flex;
         flex-direction: column;
         text-align: center;
     }
 
-    .mobile-menu .nav-item-mobile {
+    .nav-item-mobile {
         display: block;
         font-size: 13px;
         padding-top: 0.8rem;
@@ -1240,6 +1229,7 @@ button:hover {
 
     .sobre-image-container {
         height: 350px;
+        width: 250px;
         
     }
 
